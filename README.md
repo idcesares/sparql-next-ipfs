@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Decentralized SPARQL Endpoint with Next.js**
 
-## Getting Started
+This project is a decentralized SPARQL endpoint built on top of the Interplanetary File System (IPFS) using Next.js. It's part of a Semantic Web project and is designed to be deployed on Fleek.
 
-First, run the development server:
+## **Prerequisites**
 
-```bash
+- Node.js (>=16.8.0)
+- npm
+- Next.js
+
+## **Installation**
+
+1. Clone this repository:
+    
+    ```
+    git clone https://github.com/idcesares/sparql-next-ipfs.git
+    ```
+    
+2. Navigate into the project directory:
+    
+    ```
+    cd sparql-next-ipfs
+    ```
+    
+3. Install the dependencies:
+    
+    ```
+    npm install
+    ```
+    
+
+## **Usage**
+
+To start the server, run:
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The server will start on port 3000 (or the port specified by the **`PORT`** environment variable).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can send SPARQL queries to the endpoint by making a POST request to **`/api/sparql`** with your query in the body of the request.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## **Deployment**
 
-## Learn More
+This project is designed to be deployed on Fleek. To deploy your own instance:
 
-To learn more about Next.js, take a look at the following resources:
+1. Sign up for a Fleek account and connect it to your GitHub account.
+2. Fork this repository and push it to your GitHub account.
+3. In the Fleek dashboard, create a new site and select your repository.
+4. Set the build command to **`npm install && npm run build && npm export`** and the publish directory to **`/.`**
+5. Make sure to use **`node:lts`** as the default docker image.
+6. Click "Deploy Site" to start the deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **License**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the **[LICENSE](LICENSE)** file for details.
